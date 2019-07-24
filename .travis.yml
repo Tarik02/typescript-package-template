@@ -11,6 +11,10 @@ script:
 - mkdir dist
 - cd dist
 - ../node_modules/.bin/sao ../ --yes --debug
+- yarn lint
+- yarn build
+- yarn test
+- cd ..
 
 notifications:
   email: false
