@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+- '12'
+
+install:
+- yarn install
+
+script:
+<%_ if (lint) { _%>
+- yarn lint
+<%_ } _%>
+- yarn build
+<%_ if (test) { _%>
+- yarn test
+<%_ } _%>
+
+notifications:
+  email: false
+
+<%_ if (travis_deploy) { _%>
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: '<%= email %>'
+  api_key:
+    secure: '<%= npm_api_key %>'
+  on:
+    tags: true
+    branch: master
+    condition: '$TRAVIS_NODE_VERSION = 12'
+<%_ } _%>

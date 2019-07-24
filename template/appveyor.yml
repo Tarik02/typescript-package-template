@@ -1,0 +1,33 @@
+environment:
+  matrix:
+  - nodejs_version: '8'
+  - nodejs_version: '10'
+  - nodejs_version: '12'
+
+install:
+- ps: Install-Product node $env:nodejs_version
+- npm install --global yarn@latest
+- set PATH=%APPDATA%\npm;%PATH%
+
+- yarn install
+
+matrix:
+  fast_finish: true
+build: false
+shallow_clone: true
+
+test_script:
+- node --version
+- yarn --version
+
+<%_ if (lint) { _%>
+- yarn lint
+<%_ } _%>
+- yarn build
+<%_ if (test) { _%>
+- yarn test
+<%_ } _%>
+
+cache:
+- 'node_modules -> appveyor.yml,package.json,yarn.lock'
+- '%LOCALAPPDATA%\Yarn -> appveyor.yml,package.json,yarn.lock'

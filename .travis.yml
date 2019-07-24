@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '8'
+- '10'
+- '12'
+
+install:
+- yarn install
+
+script:
+- mkdir dist
+- cd dist
+- ../node_modules/.bin/sao ../ --yes --debug
+
+notifications:
+  email: false
+
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: Taras.Fomin@gmail.com
+  api_key:
+    secure: LuyoH2hoMl7gdJERDxbS40Ip8DtiI6oW8h59S1ypg/7vXNWyTG7D6/TEYEnU6l+5T+AEyQBjzd8qJJhvKMv8PRVuPTUlqf7fzypo/1WaYUyuiBJ0WHGOdeCnnaHw1nWVi11ndSppyLHQdxG6Wkwu/kQNGU6e5RoPnxXM33QIYyx3LWcJBRuxqlRK7Dii42+TCLlmJzSZBSegc26Io5ZrD7+VDYIKQVQEkgKI/8viXb1BUK1CUil/JocVa09fIkHj4zE6/yZFkLEvwKq3j54/kL2Tmkk6yAEYACFIaIfXt9HiyZ0LmHdV3HtT8AbuWWmhYZq+lo2TuVoKTmt0kvfa8Ze8wp39zdB6yHsT6EfAh9SatcQMZEYPApSbFLAn3PEPHNrne+YXU3xKXlJ+1U6gsX9iHImgZeklOs9XaDSynG6UKow95qdOPwEfwS6Z1TTL4gEdDsB7J7wHEMi/VoeyTYL6wybggphE9m1yrGniZ6aQv1HcpjGU/hsejImzF3+I66ORGwmazalmSbogbYZuPA+vqxWpJHde/8jzbT3KyM8kkJpnZcuh0bPnE0oITAXpjrwGY+bK6z3JIsNQI0YIWUQ16Mibig+LASIf+ChPcOQEieetdhMWmn/5z6UBJ6fZci0boDUZnyTw4HoA6tCzhfdZBp8ZvisekGEmcxQQrTY=
+  on:
+    tags: true
+    branch: master
+    condition: '$TRAVIS_NODE_VERSION = 12'

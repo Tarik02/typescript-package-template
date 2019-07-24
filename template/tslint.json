@@ -1,0 +1,25 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "rules": {
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "interface-over-type-literal": false,
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "object-literal-sort-keys": false,
+    "no-string-literal": false,
+    "interface-name": false,
+    "no-unused-expression": true,
+    "space-before-function-paren": [
+      true,
+      "never"
+    ]
+  }
+}

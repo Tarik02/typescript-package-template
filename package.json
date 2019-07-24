@@ -1,0 +1,27 @@
+{
+  "name": "typescript-package-template",
+  "version": "1.0.0",
+  "description": "TypeScript package template",
+  "license": "MIT",
+  "author": {
+    "name": "Tarik02",
+    "url": "https://github.com/Tarik02"
+  },
+  "homepage": "https://github.com/Tarik02/typescript-package-template#readme",
+  "bugs": {
+    "url": "https://github.com/Tarik02/typescript-package-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarik02/typescript-package-template.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "superb": "^4.0.0"
+  },
+  "devDependencies": {
+    "sao": "^1.6.1"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    <%_ if (tslib) { _%>
+    "importHelpers": true,
+    <%_ } _%>
+
+    <%_ if (ts_decorators) { _%>
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    <%_ } _%>
+
+    <%_ if (ts_sourcemap) { _%>
+    "sourceMap": true,
+    <%_ } _%>
+
+    "incremental": true,
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es6",
+    ],
+    "allowJs": false,
+    "removeComments": false,
+    "downlevelIteration": true,
+    "declaration": true,
+
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "moduleResolution": "node"
+  }
+}
