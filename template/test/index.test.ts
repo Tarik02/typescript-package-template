@@ -7,4 +7,3 @@ describe('getRandomNumber', () => {
     expect(getRandomNumber()).eq(4);
   });
 });
-

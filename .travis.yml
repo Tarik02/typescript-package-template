@@ -15,6 +15,7 @@ script:
 - yarn build
 - yarn test
 - cd ..
+- rm -rf dist
 
 notifications:
   email: false
