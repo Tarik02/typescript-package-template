@@ -1,11 +1,11 @@
 <h1 align="center">TypeScript package template</h1>
 
 <p align="center">
-  <a href="https://npmjs.com/package/typescript-package-template">
-    <img src="https://flat.badgen.net/npm/v/typescript-package-template" alt="npm version" />
+  <a href="https://npmjs.com/package/sao-typescript-package">
+    <img src="https://flat.badgen.net/npm/v/sao-typescript-package" alt="npm version" />
   </a>
-  <a href="https://npmjs.com/package/typescript-package-template">
-    <img src="https://flat.badgen.net/npm/dm/typescript-package-template" alt="npm downloads" />
+  <a href="https://npmjs.com/package/sao-typescript-package">
+    <img src="https://flat.badgen.net/npm/dm/sao-typescript-package" alt="npm downloads" />
   </a>
   <img src="https://flat.badgen.net/github/license/Tarik02/typescript-package-template" alt="license" />
   <a href="https://travis-ci.org/Tarik02/typescript-package-template">
@@ -40,5 +40,5 @@ sao Tarik02/typescript-package-template
 ### From npm
 
 ```bash 
-sao typescript-package-template
+sao typescript-package
 ```
